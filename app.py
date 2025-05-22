@@ -14,11 +14,7 @@ df = cargar_datos()
 
 st.title("🔎 Filtro de datos desde Google Sheets")
 
-# Mostrar tabla completa
-st.subheader("📋 Datos completos")
-st.dataframe(df)
-
-# Filtros interactivos
+# 🔍 Filtros interactivos
 st.subheader("🔍 Filtrar datos")
 
 # Filtrar por nombre
@@ -44,6 +40,6 @@ if ciudad:
 
 df_filtrado = df_filtrado[(df_filtrado['EDAD'] >= edad[0]) & (df_filtrado['EDAD'] <= edad[1])]
 
-# Mostrar resultados filtrados
+# ✅ Mostrar resultados filtrados
 st.subheader("✅ Resultados")
 st.dataframe(df_filtrado)
